@@ -1,1 +1,17 @@
-<p>courses works!</p>
+<button (click)="onNewCourse()">Rafraîchir la liste des courses</button>
+<div *ngIf="courses.length > 0; else empty">
+  <h2>Courses</h2>
+  <p>Il y a {{ courses.length }} courses disponibles.</p>
+  <ul>
+    <li
+      *ngFor="let course of courses; index as i; even as isEven"
+      [style.color]="isEven ? 'green' : 'black'"
+    >
+      {{ i + 1 }} - {{ course.name }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #empty>
+  <p>Il n'y a actuellement pas de courses!</p>
+</ng-template>
