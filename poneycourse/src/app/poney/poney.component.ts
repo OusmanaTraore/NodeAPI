@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./poney.component.scss'],
 })
 export class PoneyComponent implements OnInit {
+  size = 2;
+
   poneys: Array<any> = [
     { name: 'Poney mignon' },
     { name: 'Poney grosminet' },

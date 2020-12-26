@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
   courses: Array<any> = [];
-
   // tslint:disable-next-line: typedef
   onNewCourse() {
     this.courses = [{ name: 'Paris' }, { name: 'Lyon' }, { name: 'Marseille' }];

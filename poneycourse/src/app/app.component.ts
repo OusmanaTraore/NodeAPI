@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   // IS_PROD = false;
-  // title = 'poneycourse';
+  title = 'COURSE DE PONEY';
   numberOfUsers = 36;
   pangolin: any = {
     name: 'mignon',
