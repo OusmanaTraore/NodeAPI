@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let poney of poneys | slice: 0:size; index as i">
+    {{ i + 1 }} - {{ poney.name }}
+  </li>
+</ul>
