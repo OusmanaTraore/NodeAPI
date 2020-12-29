@@ -1,9 +1,9 @@
-buf = new Buffer(256);
+buf = Buffer(256);
 len = buf.write("/ 0124");
 
 console.log("Octets written : " + len);
 
-buf2 = new Buffer(26);
+buf2 = Buffer(26);
 for (var i = 0; i < 26; i++) {
   buf2[i] = i + 97;
 }
