@@ -1,0 +1,28 @@
+.list {
+  position: inline;
+}
+body {
+  background-color: black;
+  color: green;
+}
+h1 {
+  color: #ffffff;
+  background-color: teal;
+  border: 1px double magenta;
+  width: fit-content;
+  background-attachment: fixed;
+  background-attachment: scroll;
+}
+p {
+  text-indent: 1cm;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-variant: small-caps;
+  /* direction: ltr; */
+  /* letter-spacing: 2px; */
+  word-spacing: 2px;
+  text-decoration: blink;
+  /* text-decoration: underline; */
+  /* text-decoration: overline; */
+  text-shadow: 4px 4px 8px blue;
+}

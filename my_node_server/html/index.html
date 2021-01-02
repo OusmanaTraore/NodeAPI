@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/my_node_server/css/index.css">
+   <script src="/my_node_server/javascript/functions.js" defer></script>
   </head>
   <body>
     <h1>Block Level</h1>
@@ -25,7 +27,9 @@
       Tous ces éléments peuvent aussi bien contenir des "block-level" que des
       "inline elements."
     </p>
+    <hr />
     <h1>Inline elements</h1>
+
     <p>
       Les élément dits "inline elements" ne débutent par forcément sur une
       nouvelle ligne et prennent par défaut la largeur requise.
@@ -38,10 +42,7 @@
       "map","object","q","samp","script","select","small","span","strong","sub","sup","textarea","time","tt",et
       "var"
     </ul>
-    <p>
-      Tous ces éléments peuvent aussi bien contenir des "block-level" que des
-      "inline elements."
-    </p>
+    <hr />
     <h1>Formatage</h1>
     <p>
       Le formatage HTML est un processus permettant de donner une vue de la page
@@ -79,5 +80,151 @@
       </li>
       <li>"u" pour surligner <u>le texte</u>.</li>
     </ol>
+    <hr />
+    <h1>Html phrases Tags</h1>
+    <p>
+      Voici la liste des tags utilisés à l'intérieur des phrases. <br />
+      Certains d'entres eux ont déjà étés mentionnés dans la section formatage!
+    </p>
+    <ol>
+      <li>
+        "Abbreviation": "abbr"
+        <p>
+          Exemple: <br />
+          Le langage<abbr title="Hypertext Markup language"> HTML</abbr> est
+          utilisé pour la création de pages web.
+        </p>
+      </li>
+      <li>
+        "Marked Tag": "mark"
+        <p>
+          Exemple: <br />
+          Ce tag permet de <mark> surbriller le texte</mark> .
+        </p>
+      </li>
+      <li>
+        "Strong text": "strong"
+        <p>
+          Exemple: <br />
+          Dans le HTML il est recommandé d'utiliser <strong>lower-case</strong>
+        </p>
+      </li>
+      <li>
+        "Emphasized text": "em"
+        <p>
+          Exemple: <br />
+          HTML est un langage <em> facile </em> à apprendre.
+        </p>
+      </li>
+      <li>
+        "Definition tag": "dfn"
+        <p>
+          Exemple: <br />
+          <dfn> HTML </dfn> est un langage de markup.
+        </p>
+      </li>
+      <li>
+        "Quoting text": "blockquote"
+        <p>Exemple: <br />
+        <blockquote
+          cite="https://www.keepinspiring.me/famous
+        -quotes/"
+        >
+          <p>
+            ?The first step toward success is taken when you refuse to be a
+            captive of the environment in which you first find yourself.?
+          </p>
+        </blockquote>
+        <cite>-Mark Caine</cite>
+        </p>
+      </li>
+      <li>
+        "Short Quotations": "q"
+        <p>
+          Exemple: <br />
+          Steve Jobs said:
+          <q
+            >If You Are Working On Something That You Really Care About, You
+            Don't Have To Be Pushed. The Vision Pulls You.
+          </q>
+        </p>
+      </li>
+      <li>
+        "Code tag": "code"
+        <p>
+          Exemple: <br /> <br>
+          First Java program
+          <p> <code> class Simple { public static void main (String args[]){
+            System.out.println("Hello Java"); }}
+          </code></p>
+        </p>
+      </li>
+      <li>
+        "Keyboard tag": "kbd"
+        <p>
+          Exemple: <br /> <br>
+          Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>t</kbd>
+          to restore page on chrome.
+        </p>
+      </li>
+      <li>
+        "address tag": "address"
+        <p>
+          Exemple: <br /> 
+          <address> You can ask your queries by contact us on 
+            <a href="">example123@newdomain.com</a> <br>
+            You can also visit at: <br> 82 Boulevard BonneMaison. Villa Grnade, DT 68542. 
+          </address>
+        </p>
+      </li>
+    </ol>
+    <hr>
+    <h1>HTML listes ordonnées</h1>
+    <ol class="list">
+      <li>HTML</li>
+      <li>Java</li>
+      <li>Javascript</li>
+      <li>SQL</li>
+    </ol>
+    <ol  class="list" type="I"> 
+      <li>HTML</li>
+      <li>Java</li>
+      <li>Javascript</li>
+      <li>SQL</li>
+    </ol>
+    <ol  class="list" type="i"> 
+      <li>HTML</li>
+      <li>Java</li>
+      <li>Javascript</li>
+      <li>SQL</li>
+    </ol>
+     
+    <ol  class="list" type="a" start="5"> 
+      <li>HTML</li>
+      <li>Java</li>
+      <li>Javascript</li>
+      <li>SQL</li>
+    </ol>
+     <ol  class="list" type="A"> 
+      <li>HTML</li>
+      <li>Java</li>
+      <li>Javascript</li>
+      <li>SQL</li>
+    </ol>
+    <ol  class="list" reversed> 
+      <li>HTML</li>
+      <li>Java</li>
+      <li>Javascript</li>
+      <li>SQL</li>
+    </ol>
+    <hr>
+    <h1>Function Javascript</h1>
+    <p>Cliquez sur le bouton suivant pour appeler la fonction</p>
+    <form >
+      <input type="button" onclick="sayHello('Ous',25)" value="Say Hi">
+    </form> <br>
+    <button> Click me</button>
+    <p> Change me!</p>
   </body>
+
 </html>
