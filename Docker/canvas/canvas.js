@@ -28,6 +28,7 @@ function draw() {
     /**
      * smilung face
      */
+    var incrémentation = [75,80,90,100,110,120,130,140];
     var x = 140,
       y = x,
       z = 50,
