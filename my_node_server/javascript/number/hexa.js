@@ -1,0 +1,12 @@
+console.log(0x0f0a);
+console.log(0x00a0);
+console.log(0x0a00);
+console.log(0xa000);
+console.log(0x0001);
+console.log(10 / "1");
+console.log(10 / 0);
+console.log(10 / []);
+console.log(10 / {});
+console.log(10 + null);
+console.log(typeof NaN);
+console.log(typeof 10);

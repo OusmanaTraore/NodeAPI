@@ -1,0 +1,11 @@
+#canvas {
+  /* background-color: black; */
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  margin: 25px;
+}
+.texte {
+  background-color: chartreuse;
+  /* color: chartreuse; */
+}
