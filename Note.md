@@ -24,6 +24,6 @@ GPS(Localisation et transmission de données)
 
 Modeles OSI
 Segment couche 4
-=> paquets couche 3
+=> paquets couche 3sion
 => trames couche 2
 => bits couche 1
