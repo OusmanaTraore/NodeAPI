@@ -39,6 +39,7 @@ app.get("/person", (req, res) => {
 // The .env file is a hidden file that is used to pass environment variables to your application.
 
 // 6) Use the .env file to configure the app
+
 app.get("/json", (request, response) => {
   if (process.env.MESSAGE_STYLE === "uppercase") {
     response.json({ message: "HELLO JSON" });
