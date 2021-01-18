@@ -74,12 +74,16 @@ ul.topnav li.right {
   height: 300px; /* Should be removed. Only for demonstration*/
   margin: 2px;
   border: 2px solid black;
+  overflow: hidden;
 }
 .column1 {
   border: 2px solid black;
   float: left;
   width: 13%;
   padding: 10px;
+  overflow: hidden;
+  /* overflow: scroll; */
+  zoom: 1;
   /* height: 300px; Should be removed. Only for demonstration */
 }
 
@@ -88,4 +92,17 @@ ul.topnav li.right {
   content: "";
   display: table;
   clear: both;
+}
+.card {
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-link {
+  text-decoration: none;
+  zoom: 2;
+}
+.dernier_articles {
+  text-align: center;
+  zoom: 2;
 }
