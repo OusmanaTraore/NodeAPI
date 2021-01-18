@@ -1,0 +1,91 @@
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-family: arial;
+  text-align: left;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+ul.topnav li {
+  float: left;
+}
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+  font-size: 17px;
+  border-right: 1px solid #bbb;
+}
+ul.topnav li a:hover:not(.active) {
+  background-color: #ddd;
+  color: black;
+}
+ul.topnav li a.active {
+  background-color: #4caf50;
+}
+ul.topnav li.right {
+  float: right;
+}
+@media screen and (max-width: 720px) {
+  ul.topnav li {
+    width: 100%;
+  }
+  ul.topnav a {
+    width: 100%;
+  }
+}
+.article {
+  float: left;
+  /* text-align: center; */
+  /* display: flex; */
+  /* flex: auto; */
+}
+.articleDiv {
+  float: left;
+  /* flex: 1; */
+  border: 2px double black;
+}
+.aside {
+  float: right;
+  width: 250px;
+  border: 2px double black;
+  background-color: #4caf50;
+}
+/* .nav {
+  float: left;
+  width: 150px;
+} */
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 28%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration*/
+  margin: 2px;
+  border: 2px solid black;
+}
+.column1 {
+  border: 2px solid black;
+  float: left;
+  width: 13%;
+  padding: 10px;
+  /* height: 300px; Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
