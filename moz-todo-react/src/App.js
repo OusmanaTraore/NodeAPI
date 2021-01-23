@@ -1,18 +1,27 @@
 /* eslint-disable jsx-a11y/no-redundant-roles */
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { nanoid } from "nanoid";
 import Todo from "./components/Todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
+  const listHeadingRef = useRef(null);
 
   function addTask(name) {
     // Définitio du modèle de nouvelle tâche
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     // Ajout de nouvelles tâches à la liste des tâches pré-éxistantes
-    setTasks([...tasks, newTask]);
+    setTasks([newTask, ...tasks]);
   }
   function toggleTaskCompleted(id) {
     const updatedTasks = tasks.map((task) => {
@@ -63,11 +72,9 @@ function App(props) {
         editTask={editTask}
       />
     ));
-  // const filtreList = props.filtres.map((filtre) => (
-  //   <FilterButton id={filtre.id} name={filtre.name} key={filtre.id} />
-  // ));
+
   const tasksNoun =
-    (taskList.length !== 1) | (taskList.length !== 0) ? "tasks" : "task";
+    taskList.length === 0 || taskList.length === 1 ? "task" : "tasks";
   const headingText = `${taskList.length}  ${tasksNoun} remaining`;
 
   const FILTER_NAMES = Object.keys(FILTER_MAP);
@@ -79,12 +86,23 @@ function App(props) {
       setFilter={setFilter}
     />
   ));
+
+  const prevTaskLength = usePrevious(tasks.length);
+  useEffect(() => {
+    if (tasks.length - prevTaskLength === -1) {
+      listHeadingRef.current.focus();
+    }
+  }, [tasks.length, prevTaskLength]);
   return (
     <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
+      <div class="title">
+        <h1>Agenda</h1>
+      </div>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">{filterList}</div>
-      <h2 id="list-heading"> {headingText} </h2>
+      <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
+        {headingText}
+      </h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"

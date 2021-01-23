@@ -53,6 +53,9 @@ input {
 input[type="text"] {
   border-radius: 0;
 }
+input:focus {
+  background-color: yellow;
+}
 body {
   width: 100%;
   max-width: 68rem;
@@ -80,13 +83,31 @@ body {
   cursor: pointer;
   text-transform: capitalize;
 }
+/* .btn:hover {
+  background-color: rgb(68, 245, 32);
+  color: white;
+} */
 .btn.toggle-btn {
   border-width: 1px;
   border-color: #d3d3d3;
 }
+.btn.toggle-btn:hover {
+  background-color: rgb(151, 140, 151);
+}
 .btn.toggle-btn[aria-pressed="true"] {
-  text-decoration: underline;
-  border-color: #4d4d4d;
+  text-decoration: none;
+  border: 5px double rgb(252, 68, 243);
+
+  background-color: rgb(68, 245, 32);
+  color: white;
+  zoom: 1.5;
+}
+.title {
+  background-color: black;
+  color: white;
+  width: fit-content;
+  text-align: center;
+  border-radius: 15px 40px;
 }
 .btn__danger {
   color: #fff;
