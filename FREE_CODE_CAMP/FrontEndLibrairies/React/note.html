@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="environment">
+      <p>
+        Pour pouvoir utiliser Reactjs, nous avons besoin d'installer Node.js sur
+        notre machine.
+        <br />
+        Vous pouvez le téléchargez via le lien suivant:
+        <a href="https://nodejs.org/en/download/" target="_blank">
+          téléchargez la dernière version ici...</a
+        >
+      </p>
+      <p>...Ensuite nous pouvons commencer l'installation de ReactJS .</p>
+      <p>NB: Les lignes de commande dans cette section concernent PowerShell</p>
+      <dl>
+        <dt>
+          <button class="button">Etape 1</button> Installez create-react-app
+        </dt>
+        <dd>C:.../> <span class="span">npx create-react-app my-app</span></dd>
+        <br />
+        <!-- <dt>
+          <button class="button">Etape 2</button> Supprimez tous les fichiers
+          sources.
+        </dt>
+        <dd>C:.../> <span class="span">cd my-app/src </span></dd>
+        <dd>C:.../my-app/src> <span class="span">del * </span></dd>
+        <dd>Confirmez la suppression en tapant "yes" via votre shell.</dd>
+        <br /> -->
+        <!-- 
+        <dt>
+          <button class="button">Etape 2</button> Ajoutez les fichier ".css",
+          ".js".
+        </dt>
+        <dd>
+          C:.../my-app/src> <span class="span">echo $null > index.css </span>
+        </dd>
+        <dd>
+          C:.../my-app/src> <span class="span">echo $null > index.js </span>
+        </dd>
+        <br />
+        <dt> -->
+        <!-- <button class="button">Etape 3</button> Ajoutez les lignes de
+          commandes suivantes dans le fichier index.js
+        </dt>
+        <dd>
+          <div class="span">
+            import React from 'react'; <br />
+            import ReactDOM from 'react-dom'; <br />
+            import './index.css';
+          </div>
+        </dd> -->
+        <!-- <br /> -->
+        <dt>
+          <button class="button">Etape 2</button> Startez votre application
+        </dt>
+        <dd>
+          <span class="span"
+            >cd my-app ou cd .. en fonction de là où on est.
+          </span>
+        </dd>
+        <dd>C:.../my-app><span class="span"> npm start </span></dd>
+      </dl>
+
+      <p>Et voila! une page devrait s'ouvrir sur localhost:3000</p>
+    </div>
+    <h1>Création de composant React Stateless</h1>
+    <pre>
+      <h2>Méthode 1:</h2>
+      const MyComponent = function() {
+        return(<div>Completed challenge!</div>);
+      }
+      <h2>Méthode 2:</h2>
+      En utilsant les classes
+      class MyComponent extends React.Component {
+        constructor(props) {
+        super(props);
+      }
+      render() {
+   
+        return(
+
+     <div>
+     <h1> Hello React! </h1>
+     </div>
+      );
+
+   
+      }
+    }
+    </pre>
+    <h1>Création de composant composés</h1>
+    const ChildComponent = () => { return (
+    <div>
+      <p>I am the child</p>
+    </div>
+    ); }; class ParentComponent extends React.Component { constructor(props) {
+    super(props); } render() { return (
+    <div>
+      <h1>I am the parent</h1>
+      { /* Change code below this line */ }
+
+      <ChildComponent />
+      { /* Change code above this line */ }
+    </div>
+    ); } };
+    <h1>Création de composants composés imbriqués</h1>
+    const TypesOfFruit = () => { return (
+    <div>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
+    </div>
+    ); }; const Fruits = () => { return (
+    <div>
+      { /* Change code below this line */ }
+      <TypesOfFruit />
+      { /* Change code above this line */ }
+    </div>
+    ); }; class TypesOfFood extends React.Component { constructor(props) {
+    super(props); } render() { return (
+    <div>
+      <h1>Types of Food:</h1>
+      { /* Change code below this line */ }
+      <Fruits />
+      { /* Change code above this line */ }
+    </div>
+    ); } };
+    <h1>Rendre un composant class sur le DOM</h1>
+    class TypesOfFood extends React.Component { constructor(props) {
+    super(props); } render() { return (
+    <div>
+      <h1>Types of Food:</h1>
+      {/* Change code below this line */}
+      <Fruits />
+      <Vegetables />
+      {/* Change code above this line */}
+    </div>
+    ); } }; // Change code below this line ReactDOM.render(
+    <TypesOfFood />, document.getElementById('challenge-node') );
+    <h1>
+      Passer des propriétés à un composant functionnel sans état (Stateless)
+    </h1>
+    const CurrentDate = (props) => { return (
+    <div>
+      { /* Change code below this line */ }
+      <p>The current date is: {props.date}</p>
+      { /* Change code above this line */ }
+    </div>
+    ); }; class Calendar extends React.Component { constructor(props) {
+    super(props); } render() { return (
+    <div>
+      <h3>What date is it?</h3>
+      { /* Change code below this line */ }
+      <CurrentDate date="{Date()}" />
+      { /* Change code above this line */ }
+    </div>
+    ); } };
+    <h1>Passer un Tableau en propriétés</h1>
+    const List = (props) => { { /* Change code below this line */ } return
+    <p>{props.tasks.join(',')}</p>
+    { /* Change code above this line */ } }; class ToDo extends React.Component
+    { constructor(props) { super(props); } render() { return (
+    <div>
+      <h1>To Do Lists</h1>
+      <h2>Today</h2>
+      { /* Change code below this line */ } <List tasks ={["walk","write"]}/>
+      <h2>Tomorrow</h2>
+      <List tasks ={["watch","clean","delete"]}/> { /* Change code above this
+      line */ }
+    </div>
+    ); } };
+    <h1>définir des propriétés par défaut</h1>
+    const ShoppingCart = (props) => { return (
+    <div>
+      <h1>Shopping Cart Component</h1>
+    </div>
+    ) }; // Change code below this line ShoppingCart.defaultProps ={ items:0 }
+    <h1>Surplomber les propriétés par défaut</h1>
+    const Items = (props) => { return
+    <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+    } Items.defaultProps = { quantity: 0 } class ShoppingCart extends
+    React.Component { constructor(props) { super(props); } render() { { /*
+    Change code below this line */ } return <Items quantity="{10}" />
+    { /* Change code above this line */ } } };
+    <h1>Utilisation des prototypes</h1>
+    const Items = (props) => { return
+    <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+    }; // Change code below this line Items.propTypes = { quantity:
+    PropTypes.number.isRequired }; // Change code above this line
+    Items.defaultProps = { quantity: 0 }; class ShoppingCart extends
+    React.Component { constructor(props) { super(props); } render() { return
+    <Items />
+    } };
+  </body>
+</html>

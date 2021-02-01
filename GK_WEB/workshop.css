@@ -1,0 +1,11 @@
+.texte1 {
+  background-color: green;
+  width: 300px;
+  padding-top: 1em;
+}
+
+.texte1 > p {
+  background-color: purple;
+  width: 100px;
+  margin-left: 3em;
+}

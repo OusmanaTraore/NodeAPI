@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch QuickStart",
+      "request": "launch",
+      "mainClass": "QuickStart",
+      "projectName": "globalNkowledge_19e73037"
+    },
+    {
       "name": "Python : Fichier actuel",
       "type": "python",
       "request": "launch",

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercices</title>
+  </head>
+  <body>
+    <h1 style="font-style: italic">Exercice1</h1>
+    <div id="wrapper">
+      <h1>Hello World!</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error hic
+        rerum laudantium est ratione, maiores, velit ducimus voluptates
+        reprehenderit magni accusamus laboriosam facilis. Nemo necessitatibus
+        ducimus molestias vel reiciendis?
+        <a href="https://google.fr" id="link">google</a>
+      </p>
+      <ul>
+        <li>Lorem Ipsum</li>
+        <li>Dolorsitamet</li>
+        <li>Foobar</li>
+      </ul>
+      <button id="myButton">Gethref</button>
+    </div>
+    <script>
+      var elements = document.getElementsByTagName("p");
+      var length = elements.length;
+      for (var i = 0; i < length; i++) {
+        elements[i].style.color = "red";
+      }
+      var myLink = document.getElementById("link");
+      var myButton = document.getElementById("myButton");
+      myButton.addEventListener("click", function (event) {
+        alert(myLink.getAttribute("href"));
+      });
+    </script>
+    <hr />
+
+    <div id="capt1">
+      <span id="capt2"> Cliquez pour la capture.</span>
+    </div>
+    <div id="boul1">
+      <span id="boul2"> Cliquez pour le bouillonnement.</span>
+    </div>
+    <script>
+      var capt1 = document.getElementById("capt1");
+      var capt2 = document.getElementById("capt2");
+      var boul1 = document.getElementById("boul1");
+      var boul2 = document.getElementById("boul2");
+
+      capt1.addEventListener(
+        "click",
+        function () {
+          alert("L' évènement du div vient de se déclencher.");
+        },
+        true
+      );
+      capt2.addEventListener(
+        "click",
+        function () {
+          alert("L' évènement du span vient de se déclencher.");
+        },
+        true
+      );
+      boul1.addEventListener(
+        "click",
+        function () {
+          alert("L' évènement du div vient de se déclencher.");
+        },
+        false
+      );
+      boul2.addEventListener(
+        "click",
+        function () {
+          alert("L' évènement du span vient de se déclencher.");
+        },
+        false
+      );
+    </script>
+
+    <script type="javascript">
+      var h1 = document.getElementsByTagName("h1");
+      h1.style.fontStyle = "italic";
+    </script>
+
+    <hr />
+    <h1>Exercice 2</h1>
+
+    <table id="myTable" border="1">
+      <tr>
+        <td>Ligne1 cellule1</td>
+        <td>Ligne2 cellule2</td>
+      </tr>
+      <tr>
+        <td>Ligne1 cellule1</td>
+        <td>Ligne2 cellule2</td>
+      </tr>
+    </table>
+    <button id="insertNewRow" onclick="insertRow">
+      Ajouter une nouvelle ligne
+    </button>
+    <script>
+      function insertRow() {
+        var foo = document.getElementById("myTable").insertRow(0);
+        var cell1 = foo.insertCell(0);
+        var cell2 = foo.insertCell(1);
+
+        cell1.innerHTML = "NvelleLigneCellule1";
+        cell2.innerHTML = "NvelleLigneCellule2";
+      }
+    </script>
+  </body>
+</html>

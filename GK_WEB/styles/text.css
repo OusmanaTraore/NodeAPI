@@ -1,0 +1,17 @@
+@charset "ISO-8859-15";
+#info {
+  border: solid 10px black;
+  margin: 50px;
+  padding: 30px;
+  background-color: lightgrey;
+}
+#inscript {
+  border: solid 10px black;
+  padding: 30px;
+  background-color: yellow;
+}
+#pret {
+  border: solid 10px black;
+  margin: 50px;
+  background-color: pink;
+}
