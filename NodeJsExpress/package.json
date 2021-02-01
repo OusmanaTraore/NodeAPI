@@ -1,0 +1,27 @@
+{
+  "name": "api_rest",
+  "version": "1.0.0",
+  "description": "restAPI",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OusmanaTraore/NodeAPI.git"
+  },
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "author": "Ousmana Traoré",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OusmanaTraore/NodeAPI/issues"
+  },
+  "homepage": "https://github.com/OusmanaTraore/NodeAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
